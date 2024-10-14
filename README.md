@@ -3,10 +3,13 @@
 MEEC FD 2024/2025
 
 ## Create conda environment
-conda env create -n Project_Environment_Name --file environment.yml
+conda env create -n FD2425Env310 -python=3.xx
 
 ## Export conda environment
 conda env export > environment.yml
+
+## Import conda environment
+conda env create -n Project_Environment_Name --file environment.yml
 
 ## Import pip environment
 pip install -r requirements.txt
