@@ -3,7 +3,7 @@
 MEEC FD 2024/2025
 
 ## Create conda environment
-conda create -n FD2425Env310 -python=3.xx
+conda create -n FD2425Env310 -python=3.10
 
 or
 

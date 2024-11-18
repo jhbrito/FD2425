@@ -44,7 +44,7 @@ def go_fast(a):  # Function is compiled and runs in machine code
     return a + trace
 
 
-x = np.arange(1000000).reshape(1000, 1000)
+x = np.arange(100000000).reshape(10000, 10000)
 print("Starting...")
 # Time without compiling
 start = time.time()

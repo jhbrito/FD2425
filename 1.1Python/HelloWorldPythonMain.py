@@ -1,11 +1,13 @@
 import sys
 
 
+
 def test_run():
     a = 1
     b = 2
     c = a+b
-    print("a({0}) plus b({1}) is c({2})".format(a, b, c))
+    print("a(" + str(a) + " plus b(" + str(b))
+    print("a({0:.3f}) plus b({1}) is c({2})".format(a, b, c))
     # print("a({2}) plus b({1}) is c({0})".format(c, b, a))
 
 
