@@ -35,8 +35,8 @@ Y[n_samples_per_class:2 * n_samples_per_class] = np.ones((n_samples_per_class), 
 
 fig = plt.figure(1)
 ax = fig.add_subplot(1, 3, 1)
-ax.scatter(X[Y==0, 0], X[Y==0, 1], c='r', marker='o')
-ax.scatter(X[Y==1, 0], X[Y==1, 1], c='g', marker='o')
+ax.scatter(X[Y == 0, 0], X[Y == 0, 1], c='r', marker='o')
+ax.scatter(X[Y == 1, 0], X[Y == 1, 1], c='g', marker='o')
 ax.set_xlabel("x0")
 ax.set_ylabel("x1")
 ax.set_title("Data")
@@ -48,11 +48,11 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, stratif
 # fig = plt.figure(1)
 ax = fig.add_subplot(1, 3, 2)
 
-ax.scatter(X_train[Y_train==0, 0], X_train[Y_train==0, 1], c='r', marker='o')
-ax.scatter(X_train[Y_train==1, 0], X_train[Y_train==1, 1], c='g', marker='o')
+ax.scatter(X_train[Y_train == 0, 0], X_train[Y_train == 0, 1], c='r', marker='o')
+ax.scatter(X_train[Y_train == 1, 0], X_train[Y_train == 1, 1], c='g', marker='o')
 
-ax.scatter(X_test[Y_test==0, 0], X_test[Y_test==0, 1], c='m', marker='x')
-ax.scatter(X_test[Y_test==1, 0], X_test[Y_test==1, 1], c='y', marker='x')
+ax.scatter(X_test[Y_test == 0, 0], X_test[Y_test == 0, 1], c='m', marker='x')
+ax.scatter(X_test[Y_test == 1, 0], X_test[Y_test == 1, 1], c='y', marker='x')
 
 ax.set_xlabel("x0")
 ax.set_ylabel("x1")
@@ -73,8 +73,8 @@ Y_predict = model.predict(X_test)
 
 ax = fig.add_subplot(1, 3, 3)
 
-ax.scatter(X_test[Y_predict==0, 0], X_test[Y_predict==0, 1], c='r', marker='*')
-ax.scatter(X_test[Y_predict==1, 0], X_test[Y_predict==1, 1], c='g', marker='*')
+ax.scatter(X_test[Y_predict == 0, 0], X_test[Y_predict == 0, 1], c='r', marker='*')
+ax.scatter(X_test[Y_predict == 1, 0], X_test[Y_predict == 1, 1], c='g', marker='*')
 
 ax.set_xlabel("x0")
 ax.set_ylabel("x1")
@@ -82,7 +82,6 @@ ax.set_title("Predicted Classes")
 
 plt.show()
 plt.close(fig)
-
 
 cm = metrics.confusion_matrix(Y_test, Y_predict, labels=[0, 1])
 print("Confusion Matrix:")
